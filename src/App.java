@@ -1,14 +1,20 @@
-import open_closed.DrawShape;
-import open_closed.Rectangle;
-import open_closed.Square;
-import open_closed.Triangle;
+import liskov_subtitution.IBird;
+import liskov_subtitution.IFly;
+import liskov_subtitution.Penguin;
+import liskov_subtitution.Sparrow;
 
 public class App {
     public static void main(String[] args) throws Exception {
-        Rectangle rectangle = new Rectangle();
-        Triangle triangle = new Triangle();
-        Square square = new Square();
-        DrawShape shape = new DrawShape();
-        shape.draw_Shape(square);
+        IBird sparrow = new Sparrow();
+        IBird penguin = new Penguin();
+        
+        IFly flyableSparrow = new Sparrow();
+
+        sparrow.eat();
+        penguin.eat();
+        System.out.println("--------");
+        flyableSparrow.fly();
+        
+
     }
 }
