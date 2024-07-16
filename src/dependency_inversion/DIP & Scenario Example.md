@@ -42,8 +42,8 @@ In the above code, the DeliveryCompany class directly depends on the DeliveryDri
 
 **To apply the Dependency Inversion Principle, we will :**
 
--Define an abstraction for the delivery service (i.e interface).
--Make the DeliveryCompany depend on this abstraction.
+-Define an abstraction for the delivery service (i.e interface). <br/>
+-Make the DeliveryCompany depend on this abstraction. <br/>
 -Implement the delivery service in a concrete class (DeliveryDriver). <br/>
 
 **Step 1: Define an Abstraction**
