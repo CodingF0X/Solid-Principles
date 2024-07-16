@@ -8,3 +8,6 @@
 
 ## 4- Interface Segregation Principle (ISP)
 [Click here to go to ISP demo](https://github.com/CodingF0X/Solid-Principles/blob/Interface-Segregation-Principle/src/interface_segregation/ISP%20%26%20Scenario%20Problem.MD) .
+
+## 5- Dependency Inversion Principle (DIP)
+[Click here to go to DIP demo](https://github.com/CodingF0X/Solid-Principles/blob/Dependency-Inversion-Principle/src/dependency_inversion/DIP%20%26%20Scenario%20Example.md) .
