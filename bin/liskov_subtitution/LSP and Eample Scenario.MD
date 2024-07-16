@@ -1,5 +1,6 @@
 # Liskov Substitution Principle (LSP)
 <br/>
+
 ### The Liskov Substitution Principle states that objects of a superclass should be replaceable with objects of a subclass without affecting the correctness of the program. Essentially, if class B is a subclass of class A, then objects of type A should be able to be replaced with objects of type B without altering the desirable properties of the program (e.g., correctness, task performed).
  
 
@@ -11,7 +12,7 @@ We will demonstrate the correct and incorrect ways to handle this with respect t
 Say we have two birds, Sparrow and Penguin. Obviuously Sparrow Flies, while Penguin don't.
 Both implement IBird interface. However, Penguin Can't fly!. Thus we need to throw an exception when penguin invokes the fly() method.
 
-## Example of Penguin implementin IBird( incorrect approach ) : 
+## 1- Example of Penguin implementin IBird( incorrect approach ) : 
 <br/>
 
 ```Java
@@ -70,7 +71,7 @@ public class App {
 
 In this example, substituting a Penguin where a Bird is expected causes problems, because Penguin cannot fly. This violates LSP.
 
-## Correct approach
+## 2- Correct approach
 <br/>
 We create two different interfaces. One for birds birds without specifying whether they fly or not. And one for flying birds only.
 
