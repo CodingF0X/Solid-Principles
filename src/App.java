@@ -1,22 +1,12 @@
-import interface_segregation.HourlyWorker;
-import interface_segregation.IHourlyPaid;
-import interface_segregation.ISalaryPaid;
-import interface_segregation.SalaryWorker;
-
+import dependency_inversion.DeliveryCompany;
+import dependency_inversion.DeliveryDriver;
+import dependency_inversion.IDeliveryService;
 
 public class App {
     public static void main(String[] args) throws Exception {
-        ISalaryPaid salWorker = new SalaryWorker();
-        IHourlyPaid hourWorker = new HourlyWorker();
-
-        salWorker.work();
-        salWorker.evaluatePerformance();
-        System.out.println(salWorker.getSalary());
-
-        System.out.println("------------");
+        IDeliveryService deliveryService = new DeliveryDriver();
+        DeliveryCompany company = new DeliveryCompany(deliveryService);
         
-        hourWorker.work();
-        System.out.println(hourWorker.calculatePay(8));
-        System.out.println(hourWorker.getHourlyRate());
+        company.sendProduct("Parcel");
     }
 }
