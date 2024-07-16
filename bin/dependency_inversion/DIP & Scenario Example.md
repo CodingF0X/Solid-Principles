@@ -5,7 +5,7 @@ Abstractions should not depend on details. Details should depend on abstractions
 
 ## EXAMPLE SCENARIO
 
-Assume a delivery company (DeliveryCompany) that needs to send products to customers. The actual delivery (i.e product) is handled by a delivery driver (DeliveryDriver).
+Assume a delivery company (DeliveryCompany) that needs to send products to customers. The actual delivery (i.e product) is handled by a delivery driver (DeliveryDriver).<br/>
 
 ### 1- Bad Practice
 
@@ -36,14 +36,14 @@ public class DeliveryDriver {
 
 <br/>
 
-In the above code, the DeliveryCompany class directly depends on the DeliveryDriver class. This tight coupling makes it difficult to change the delivery mechanism or to mock the delivery process for testing purposes.
+In the above code, the DeliveryCompany class directly depends on the DeliveryDriver class. This tight coupling makes it difficult to change the delivery mechanism or to mock the delivery process for testing purposes.<br/>
 
 ### 2- Best Practice
 
 **To apply the Dependency Inversion Principle, we will :**
 
--Define an abstraction for the delivery service (i.e interface).
--Make the DeliveryCompany depend on this abstraction.
+-Define an abstraction for the delivery service (i.e interface).<br/>
+-Make the DeliveryCompany depend on this abstraction.<br/>
 -Implement the delivery service in a concrete class (DeliveryDriver). <br/>
 
 **Step 1: Define an Abstraction**
@@ -83,10 +83,11 @@ package dependency_inversion;
 
 public class DeliveryCompany {
     IDeliveryService deliveryService;
-
+    // Dependecy injection :
     public DeliveryCompany(IDeliveryService deliveryService){
         this.deliveryService = deliveryService;
     }
+    // Dependecy inversion :
     public void sendProduct(String product){
         deliveryService.deliverProduct(product);
     }
